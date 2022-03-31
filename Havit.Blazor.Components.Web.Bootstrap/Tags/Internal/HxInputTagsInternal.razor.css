@@ -6,10 +6,6 @@
 	align-items: center;
 }
 
-input:focus {
-	outline: none;
-}
-
 .dropdown {
 	display: flex;
 	flex-grow: 1;
@@ -57,4 +53,14 @@ input:focus {
 
 .hx-tag-add-button-text {
 	margin: var(--hx-input-tags-add-button-text-margin);
+}
+
+.dropdown ::deep .badge {
+	opacity: 0;
+	padding-top: .15em;
+	padding-bottom: .15em;
+}
+
+.hx-input-tags-control-focused .dropdown ::deep .badge {
+	opacity: 1;
 }

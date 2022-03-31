@@ -4,6 +4,9 @@ input:focus {
 
 input {
     background-color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
     width: 100%;
 }
 

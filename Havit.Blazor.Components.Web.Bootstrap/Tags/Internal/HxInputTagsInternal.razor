@@ -42,18 +42,20 @@
     }
 
     <div id="@dropdownId" class="@CssClassHelper.Combine("dropdown", (LabelTypeEffective == Havit.Blazor.Components.Web.Bootstrap.LabelType.Floating) ? "form-floating" : null)">
-        <HxInputTagsAutosuggestInput @ref="autosuggestInput"
-                                     InputId="@InputId"
-                                     EnabledEffective="@EnabledEffective"
-                                     Value="@userInput"
-                                     OnInputInput="HandleInputInput"
-                                     OnInputFocus="HandleInputFocus"
-                                     OnInputBlur="HandleInputBlur"
-                                     OnInputMouseDown="HandleInputMouseDown"
-                                     OnInputKeyDown="HandleInputKeyDown"
-                                     Placeholder="@(ValueEffective.Any() ? null : Placeholder)"
-                                     CssClass="border-0 flex-grow-1"
-                                     Offset="@InputOffset" />
+         <HxBadge Settings="this.TagBadgeSettingsEffective" tabindex="0">
+            <HxInputTagsAutosuggestInput @ref="autosuggestInput"
+                                        InputId="@InputId"
+                                        EnabledEffective="@EnabledEffective"
+                                        Value="@userInput"
+                                        OnInputInput="HandleInputInput"
+                                        OnInputFocus="HandleInputFocus"
+                                        OnInputBlur="HandleInputBlur"
+                                        OnInputMouseDown="HandleInputMouseDown"
+                                        OnInputKeyDown="HandleInputKeyDown"
+                                        Placeholder="@(ValueEffective.Any() ? null : Placeholder)"
+                                        CssClass="border-0 flex-grow-1"
+                                        Offset="@InputOffset" />
+         </HxBadge>
         @if (dataProviderInProgress)
         {
             <HxSpinner Type="SpinnerType.Border" Size="SpinnerSize.Small" />
